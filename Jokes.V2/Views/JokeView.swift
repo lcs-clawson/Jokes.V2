@@ -23,7 +23,7 @@ struct JokeView: View {
                     .multilineTextAlignment(.center)
                 
                 Button(action: {
-                    
+                    punchlineOpacity = 1.0
                 }, label: {
                     Image(systemName: "arrow.down.circle.fill")
                         .resizable()
@@ -37,6 +37,7 @@ struct JokeView: View {
                         .font(.title)
                         .multilineTextAlignment(.center)
                         .opacity(punchlineOpacity)
+                
                 }
             
             .navigationTitle("Random Dad Jokes")
