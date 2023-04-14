@@ -11,6 +11,7 @@
 		360AFE6829E9A73100800868 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360AFE6729E9A73100800868 /* Assets.xcassets */; };
 		360AFE6B29E9A73100800868 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360AFE6A29E9A73100800868 /* Preview Assets.xcassets */; };
 		360AFE7329E9A7A500800868 /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7229E9A7A500800868 /* JokeView.swift */; };
+		360AFE7629E9B33300800868 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7529E9B33300800868 /* Joke.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		360AFE6729E9A73100800868 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		360AFE6A29E9A73100800868 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		360AFE7229E9A7A500800868 /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
+		360AFE7529E9B33300800868 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +73,17 @@
 			isa = PBXGroup;
 			children = (
 				360AFE7229E9A7A500800868 /* JokeView.swift */,
+				360AFE7429E9B31F00800868 /* Model */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		360AFE7429E9B31F00800868 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				360AFE7529E9B33300800868 /* Joke.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -147,6 +158,7 @@
 			files = (
 				360AFE6429E9A72E00800868 /* Jokes_V2App.swift in Sources */,
 				360AFE7329E9A7A500800868 /* JokeView.swift in Sources */,
+				360AFE7629E9B33300800868 /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
