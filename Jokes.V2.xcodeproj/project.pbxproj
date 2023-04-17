@@ -12,6 +12,7 @@
 		360AFE6B29E9A73100800868 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 360AFE6A29E9A73100800868 /* Preview Assets.xcassets */; };
 		360AFE7329E9A7A500800868 /* JokeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7229E9A7A500800868 /* JokeView.swift */; };
 		360AFE7629E9B33300800868 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7529E9B33300800868 /* Joke.swift */; };
+		360AFE7929EDC39F00800868 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7829EDC39F00800868 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		360AFE6A29E9A73100800868 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		360AFE7229E9A7A500800868 /* JokeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeView.swift; sourceTree = "<group>"; };
 		360AFE7529E9B33300800868 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
+		360AFE7829EDC39F00800868 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,17 @@
 			isa = PBXGroup;
 			children = (
 				360AFE7529E9B33300800868 /* Joke.swift */,
+				360AFE7729EDC36D00800868 /* Services */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		360AFE7729EDC36D00800868 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				360AFE7829EDC39F00800868 /* NetworkService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 			files = (
 				360AFE6429E9A72E00800868 /* Jokes_V2App.swift in Sources */,
 				360AFE7329E9A7A500800868 /* JokeView.swift in Sources */,
+				360AFE7929EDC39F00800868 /* NetworkService.swift in Sources */,
 				360AFE7629E9B33300800868 /* Joke.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,38 +16,48 @@ struct JokeView: View {
     
     // The current joke to display
     @State var currentJoke = exampleJoke
+    @State var currentJoke: Joke?
     
     // MARK Computed Porperties
     var body: some View {
         NavigationView {
             VStack {
-                Text("You see, mountains aren't just funny.")
-                Text(currentJoke.setup)
-                    .font(.title)
-                    .multilineTextAlignment(.center)
                 
-                Button(action: {
-                    withAnimation(.easeIn(duration: 1.0)) {
-                        punchlineOpacity = 1.0
-                    }
-                }, label: {
-                    Image(systemName: "arrow.down.circle.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width:40)
-                        .tint(.black)
-                          
-                          })
+                if let currentJoke = currentJoke {
                     
-                    Text("They are hill areas")
-                    Text(currentJoke.punchline)
+//                    Text("You see, mountains aren't just funny.")
+                    Text(currentJoke.setup)
                         .font(.title)
                         .multilineTextAlignment(.center)
-                        .opacity(punchlineOpacity)
-                
+                    
+                    Button(action: {
+                        withAnimation(.easeIn(duration: 1.0)) {
+                            punchlineOpacity = 1.0
+                        }
+                    }, label: {
+                        Image(systemName: "arrow.down.circle.fill")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:40)
+                            .tint(.black)
+                              
+                              })
+                        
+//                        Text("They are hill areas")
+                        Text(currentJoke.punchline)
+                            .font(.title)
+                            .multilineTextAlignment(.center)
+                            .opacity(punchlineOpacity)
+                    
+                } else {
+                    ProgressView
                 }
+            }
             
             .navigationTitle("Random Dad Jokes")
+        }
+        .task {
+            currentJoke = await NetworkService.fetch()
         }
     }
 }
