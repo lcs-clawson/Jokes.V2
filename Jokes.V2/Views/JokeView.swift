@@ -15,13 +15,14 @@ struct JokeView: View {
     @State var punchlineOpacity = 0.0
     
     // The current joke to display
-    @State var currentJoke = exampleJoke
     @State var currentJoke: Joke?
     
     // MARK Computed Porperties
     var body: some View {
         NavigationView {
             VStack {
+                
+                Spacer()
                 
                 if let currentJoke = currentJoke {
                     
@@ -50,8 +51,29 @@ struct JokeView: View {
                             .opacity(punchlineOpacity)
                     
                 } else {
-                    ProgressView
+                    ProgressView()
                 }
+                
+                Spacer()
+                
+                
+                Button(action: {
+                // Reset the interface
+                punchlineOpacity = 0.0
+
+                Task {
+                    // Get another joke
+                    withAnimation {
+                        currentJoke = nil
+                    }
+                    currentJoke = await NetworkService.fetch()
+                }
+            }, label: {
+                Text("Fetch another one")
+            })
+            .disabled(punchlineOpacity == 0.0 ? true : false)
+            .buttonStyle(.borderedProminent)
+                
             }
             
             .navigationTitle("Random Dad Jokes")
