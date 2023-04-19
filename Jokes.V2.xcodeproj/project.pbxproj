@@ -15,6 +15,7 @@
 		360AFE7929EDC39F00800868 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE7829EDC39F00800868 /* NetworkService.swift */; };
 		360AFE7C29EDCEA400800868 /* Blackbird in Frameworks */ = {isa = PBXBuildFile; productRef = 360AFE7B29EDCEA400800868 /* Blackbird */; };
 		360AFE7E29EDD05400800868 /* db.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 360AFE7D29EDD05400800868 /* db.sqlite */; };
+		360AFE8129F0313300800868 /* AppDataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 360AFE8029F0313300800868 /* AppDataBase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		360AFE7529E9B33300800868 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joke.swift; sourceTree = "<group>"; };
 		360AFE7829EDC39F00800868 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		360AFE7D29EDD05400800868 /* db.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = db.sqlite; sourceTree = "<group>"; };
+		360AFE8029F0313300800868 /* AppDataBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataBase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				360AFE6329E9A72E00800868 /* Jokes_V2App.swift */,
+				360AFE7F29F0310D00800868 /* Helpers */,
 				360AFE7129E9A78900800868 /* Views */,
 				360AFE6729E9A73100800868 /* Assets.xcassets */,
 				360AFE6929E9A73100800868 /* Preview Content */,
@@ -100,6 +103,14 @@
 				360AFE7829EDC39F00800868 /* NetworkService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		360AFE7F29F0310D00800868 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				360AFE8029F0313300800868 /* AppDataBase.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				360AFE8129F0313300800868 /* AppDataBase.swift in Sources */,
 				360AFE6429E9A72E00800868 /* Jokes_V2App.swift in Sources */,
 				360AFE7329E9A7A500800868 /* JokeView.swift in Sources */,
 				360AFE7929EDC39F00800868 /* NetworkService.swift in Sources */,
